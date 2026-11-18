@@ -14,8 +14,10 @@
 
 @font-face {
   font-family: 'Mirante';
-  src: url('../Assets/Fonts/Mirante.otf') format('opentype'),
-       url('../Assets/Fonts/Malvides.otf') format('opentype');
+  src: url('../Assets/Fonts/Mirante.woff2') format('woff2'),
+       url('../Assets/Fonts/Mirante.woff') format('woff'),
+       url('../Assets/Fonts/Mirante.ttf') format('truetype'),
+       url('../Assets/Fonts/Mirante.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
