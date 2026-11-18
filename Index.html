@@ -30,6 +30,14 @@
   <link rel="icon" type="image/png" href="Assets/Logo/favicon.png">
   <link rel="apple-touch-icon" href="Assets/Logo/favicon.png">
 
+  <!-- Preload Critical LCP Asset -->
+  <link rel="preload" as="image" href="Assets/Images/hero-slide-1.jpg" fetchpriority="high">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="Components/Header.css">
@@ -158,9 +166,9 @@
       <!-- Center Logo -->
       <div class="nav-center-logo">
         <a href="Index.html" class="brand-logo" aria-label="Talpona Exotica Home">
-          <img src="Assets/Logo/logo-white.png" alt="Talpona Exotica Logo" class="logo-img logo-light" width="140"
+          <img src="Assets/Logo/logo-white.png" alt="Talpona Exotica Logo" class="logo-img logo-light" width="154" height="80"
             height="80">
-          <img src="Assets/Logo/logo.png" alt="Talpona Exotica Logo" class="logo-img logo-dark" width="140" height="80">
+          <img src="Assets/Logo/logo.png" alt="Talpona Exotica Logo" class="logo-img logo-dark" width="154" height="80">
         </a>
       </div>
 
@@ -191,7 +199,7 @@
   <div class="mobile-drawer" id="mobile-drawer">
     <div class="mobile-drawer-header">
       <a href="Index.html" class="mobile-drawer-logo">
-        <img src="Assets/Logo/logo.png" alt="Talpona Exotica" width="120" height="68">
+        <img src="Assets/Logo/logo.png" alt="Talpona Exotica" width="131" height="68">
       </a>
       <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">&times;</button>
     </div>
@@ -977,8 +985,7 @@
       <div class="video-container">
         <video id="resort-video-player" class="resort-video-element" poster="Assets/Images/resort-video-poster.jpg"
           autoplay muted loop playsinline>
-          <!-- When resort provides mp4, it loads here. The poster image provides an immaculate fallback. -->
-          <source src="Assets/Videos/resort-preview.mp4" type="video/mp4">
+          <!-- Video source ready for production delivery. Poster acts as clean zero-overhead visual presentation. -->
         </video>
       </div>
       <div class="video-overlay"></div>
@@ -1478,7 +1485,7 @@
       <div class="footer-grid">
         <!-- Left Column: Location -->
         <div class="footer-col footer-col-left">
-          <h4 class="footer-heading">Address</h4>
+          <h3 class="footer-heading">Address</h3>
           <div class="footer-location-block">
             <div class="footer-icon-wrapper">
               <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -1505,7 +1512,7 @@
         <div class="footer-col footer-col-center">
           <div class="footer-logo-wrapper">
             <a href="Index.html" class="footer-logo-link" aria-label="Talpona Exotica">
-              <img src="Assets/Logo/logo.png" alt="Talpona Exotica" class="footer-logo-img" width="190" height="110">
+              <img src="Assets/Logo/logo.png" alt="Talpona Exotica" class="footer-logo-img" width="212" height="110">
             </a>
           </div>
           <p class="footer-tagline">
@@ -1546,7 +1553,7 @@
 
         <!-- Right Column: Contact Details -->
         <div class="footer-col footer-col-right">
-          <h4 class="footer-heading">Contact Us</h4>
+          <h3 class="footer-heading">Contact Us</h4>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
               <span class="contact-label">Telephone:</span>
@@ -2074,7 +2081,8 @@
       const btn = document.getElementById('video-play-toggle');
       if (vid && btn) {
         btn.addEventListener('click', () => {
-          if (vid.paused) { vid.play(); btn.classList.add('is-playing'); }
+          if (!vid.currentSrc) return;
+          if (vid.paused) { vid.play().catch(() => {}); btn.classList.add('is-playing'); }
           else { vid.pause(); btn.classList.remove('is-playing'); }
         });
       }

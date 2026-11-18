@@ -105,7 +105,7 @@ p.section-mirante-subheading {
   box-shadow: var(--shadow-md);
 }
 
-.loc-badge-card h4 {
+.loc-badge-card h3, .loc-badge-card h4 {
   font-family: var(--font-heading);
   font-size: 1.15rem;
   color: var(--color-accent-gold-dark);
@@ -422,7 +422,7 @@ p.section-mirante-subheading {
     padding: 14px 12px;
   }
 
-  .loc-badge-card h4 {
+  .loc-badge-card h3, .loc-badge-card h4 {
     font-size: 1.05rem;
     margin-bottom: 4px;
   }
@@ -504,7 +504,7 @@ p.section-mirante-subheading {
     padding: 12px 10px;
   }
 
-  .loc-badge-card h4 {
+  .loc-badge-card h3, .loc-badge-card h4 {
     font-size: 1rem;
     margin-bottom: 3px;
   }
