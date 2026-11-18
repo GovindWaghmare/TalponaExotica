@@ -1109,7 +1109,7 @@ a {
 }
 
 .highlight-title {
-  font-family: var(--font-heading);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 1.15rem;
   font-weight: 600;
   color: #5B4B3B;
@@ -1229,7 +1229,7 @@ a {
 
 .experience-badge-title {
   display: block;
-  font-family: var(--font-heading);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 0.95rem;
   font-weight: 600;
   color: #FFFFFF;
@@ -1440,7 +1440,7 @@ a {
 
 /* Facility Title */
 .facility-name {
-  font-family: var(--font-heading);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 1.05rem;
   font-weight: 500;
   color: #000000;
@@ -1949,7 +1949,7 @@ a {
 }
 
 .dining-feature-title {
-  font-family: var(--font-heading);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 0.98rem;
   font-weight: 600;
   color: #5B4B3B;
@@ -2106,7 +2106,7 @@ a {
 }
 
 .activity-title {
-  font-family: var(--font-heading);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 1.35rem;
   color: #5B4B3B;
   margin-bottom: 12px;
@@ -2556,7 +2556,7 @@ a {
 }
 
 .comfort-tile-title {
-  font-family: var(--font-body);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 0.9rem;
   font-weight: 600;
   color: #5B4B3B;

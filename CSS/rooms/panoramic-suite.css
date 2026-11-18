@@ -168,7 +168,7 @@
 }
 
 .sidebar-title {
-  font-family: var(--font-heading);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 1.5rem;
   color: var(--color-text-dark);
   margin-bottom: 12px;

@@ -106,7 +106,7 @@ p.section-mirante-subheading {
 }
 
 .loc-badge-card h3, .loc-badge-card h4 {
-  font-family: var(--font-heading);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 1.15rem;
   color: var(--color-accent-gold-dark);
   margin-bottom: 6px;
@@ -133,7 +133,7 @@ p.section-mirante-subheading {
 }
 
 .amenity-cat-title {
-  font-family: var(--font-heading);
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 1.5rem;
   color: var(--color-primary);
   margin-bottom: 24px;
@@ -196,6 +196,7 @@ p.section-mirante-subheading {
 
 .amenity-text-box strong {
   display: block;
+  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
   font-size: 0.92rem;
   color: var(--color-text-dark);
   margin-bottom: 2px;
