@@ -85,7 +85,7 @@
 }
 
 .footer-heading {
-  font-family: var(--font-heading, 'Malvides', Georgia, serif);
+  font-family: var(--font-heading-serif, Georgia, serif);
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.08em;
