@@ -24,7 +24,7 @@
 .location-content .section-mirante-subheading,
 p.section-mirante-subheading {
   color: #B6AE7C !important;
-  font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(0.95rem, 1.5vw, 1.2rem);
   font-weight: 600;
   letter-spacing: 0.16em;
