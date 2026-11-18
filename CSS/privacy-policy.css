@@ -1,0 +1,65 @@
+/* ========================================================
+   TALPONA EXOTICA - LEGAL & POLICY PAGES STYLESHEET
+   ======================================================== */
+
+.legal-document-wrapper {
+  max-width: 880px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.legal-document-wrapper h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: #5B4B3B;
+  margin: 36px 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.legal-document-wrapper h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-document-wrapper p {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--color-text-body);
+  margin-bottom: 18px;
+}
+
+.legal-document-wrapper ul {
+  padding-left: 24px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: var(--color-text-body);
+}
+
+.legal-document-wrapper li strong {
+  color: var(--color-text-dark);
+}
+
+.legal-last-updated {
+  font-size: 0.82rem;
+  color: var(--color-accent-gold-dark);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .legal-document-wrapper {
+    padding: 32px 20px;
+  }
+}
+

@@ -1,0 +1,459 @@
+/* ========================================================
+   TALPONA EXOTICA - PANORAMIC SEA VIEW SUITE STYLESHEET
+   Comprehensive Responsive Architecture (1920px down to 320px)
+   Strict Design, Typography, Content & Brand Preservation
+   ======================================================== */
+
+@font-face {
+  font-family: 'Malvides';
+  src: url('../../Assets/Fonts/Malvides.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mirante';
+  src: url('../../Assets/Fonts/Mirante.otf') format('opentype'),
+       url('../../Assets/Fonts/Mirante.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- 1. Room Overview Layout --- */
+.room-layout-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: clamp(32px, 3.5vw, 50px);
+  margin-top: 40px;
+  align-items: start;
+}
+
+.room-main-details {
+  min-width: 0;
+  width: 100%;
+}
+
+.room-sidebar-wrapper {
+  min-width: 0;
+  width: 100%;
+}
+
+/* --- 2. Room Gallery Mosaic Grid --- */
+.room-gallery-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 40px 0;
+}
+
+.mosaic-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  height: 220px;
+  cursor: pointer;
+  position: relative;
+  background-color: #5B4B3B;
+}
+
+.mosaic-item.mosaic-featured {
+  grid-column: span 2;
+  height: 320px;
+}
+
+.mosaic-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.mosaic-item:hover img {
+  transform: scale(1.06);
+}
+
+.mosaic-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 14px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  color: #ffffff;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+/* --- 3. Room Highlights & Specs Grid --- */
+.room-specs-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 40px;
+}
+
+.specs-three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.spec-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.spec-box-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent-gold-dark);
+  font-weight: 600;
+}
+
+.spec-box-val {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  word-break: break-word;
+}
+
+/* --- 4. Inclusions & Policies Sections --- */
+.inclusions-section {
+  background-color: var(--color-bg-sand);
+  padding: 60px 0;
+  border-radius: var(--radius-lg);
+  margin: 50px 0;
+}
+
+.inclusions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 24px;
+  margin-top: 24px;
+}
+
+.inclusion-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: var(--color-text-body);
+}
+
+.inclusion-item svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-accent-gold-dark);
+  flex-shrink: 0;
+}
+
+/* --- 5. Sticky Booking Sidebar --- */
+.booking-sticky-sidebar {
+  position: sticky;
+  top: 100px;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 32px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  box-sizing: border-box;
+}
+
+.sidebar-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+}
+
+.sidebar-badge {
+  display: inline-block;
+  background: rgba(182, 174, 124, 0.15);
+  color: var(--color-accent-gold-dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.sidebar-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.sidebar-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-features-list svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-accent-gold-dark);
+  flex-shrink: 0;
+}
+
+/* --- 6. Related Rooms Container Safeguard --- */
+.room-layout-grid ~ div > div[style*="grid"] {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS (1920px down to 320px)
+   ======================================================== */
+
+/* --- Tablet Landscape / Small Laptop (1024px & Below) --- */
+@media (max-width: 1024px) {
+  .room-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 24px;
+  }
+
+  .booking-sticky-sidebar {
+    position: static;
+    margin-top: 28px;
+    width: 100%;
+  }
+
+  .specs-three-col {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .mosaic-item.mosaic-featured {
+    grid-column: span 3;
+    height: 300px;
+  }
+
+  .inclusions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .policies-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* --- Tablet Portrait (769px – 992px) --- */
+@media (max-width: 992px) {
+  .specs-three-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .room-specs-card {
+    padding: 24px 20px;
+    margin-bottom: 32px;
+  }
+
+  .mosaic-item.mosaic-featured {
+    height: 280px;
+  }
+}
+
+/* --- Small Tablet / Large Mobile (641px – 768px) --- */
+@media (max-width: 768px) {
+  .room-hero-title {
+    font-size: clamp(1.8rem, 5.5vw, 2.3rem);
+    line-height: 1.25;
+  }
+
+  .room-gallery-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 32px 0;
+  }
+
+  .mosaic-item.mosaic-featured {
+    grid-column: span 2;
+    height: 260px;
+  }
+
+  .inclusions-section {
+    padding: 40px 0;
+    margin: 36px 0;
+  }
+}
+
+/* --- Mobile Viewports (481px – 640px) --- */
+@media (max-width: 640px) {
+  .room-hero-content {
+    padding: 0 16px;
+  }
+
+  .room-hero-title {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .badge-gold,
+  .badge-dark {
+    font-size: 0.68rem;
+    padding: 4px 10px;
+  }
+
+  .room-specs-card {
+    padding: 20px 16px;
+    margin-bottom: 28px;
+  }
+
+  .specs-three-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .spec-box-val {
+    font-size: 0.95rem;
+  }
+
+  .room-gallery-mosaic {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 28px 0;
+  }
+
+  .mosaic-item,
+  .mosaic-item.mosaic-featured {
+    grid-column: span 1;
+    height: 230px;
+  }
+
+  .inclusions-section {
+    padding: 32px 0;
+    margin: 28px 0;
+    border-radius: var(--radius-sm);
+  }
+
+  .inclusions-section > div {
+    padding: 0 16px !important;
+  }
+
+  .inclusions-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .booking-sticky-sidebar {
+    padding: 24px 16px;
+    position: static;
+    margin-top: 24px;
+  }
+
+  .sidebar-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* --- Standard Mobile (361px – 480px) --- */
+@media (max-width: 480px) {
+  .room-hero-title {
+    font-size: clamp(1.65rem, 6.5vw, 1.95rem);
+  }
+
+  .room-hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .room-layout-grid {
+    gap: 24px;
+    margin-top: 20px;
+  }
+
+  .room-specs-card {
+    padding: 18px 14px;
+    margin-bottom: 24px;
+  }
+
+  .specs-three-col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mosaic-item,
+  .mosaic-item.mosaic-featured {
+    height: clamp(200px, 58vw, 240px);
+  }
+
+  .booking-sticky-sidebar {
+    padding: 20px 14px;
+  }
+
+  .booking-sticky-sidebar .btn {
+    min-height: 46px;
+    font-size: 0.88rem;
+    padding: 12px 18px;
+  }
+
+  .room-layout-grid ~ div > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* --- Extra Small Mobile (320px – 360px) --- */
+@media (max-width: 360px) {
+  .room-hero-title {
+    font-size: 1.55rem;
+  }
+
+  .room-specs-card {
+    padding: 14px 12px;
+  }
+
+  .spec-box-label {
+    font-size: 0.7rem;
+  }
+
+  .spec-box-val {
+    font-size: 0.9rem;
+  }
+
+  .mosaic-item,
+  .mosaic-item.mosaic-featured {
+    height: 195px;
+  }
+
+  .sidebar-title {
+    font-size: 1.25rem;
+  }
+
+  .sidebar-badge {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+  }
+
+  .sidebar-features-list {
+    font-size: 0.82rem;
+    gap: 8px;
+  }
+
+  .booking-sticky-sidebar {
+    padding: 18px 12px;
+  }
+
+  .booking-sticky-sidebar .btn {
+    min-height: 44px;
+    font-size: 0.84rem;
+    padding: 10px 14px;
+  }
+}
