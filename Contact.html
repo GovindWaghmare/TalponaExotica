@@ -264,9 +264,10 @@
             </p>
 
             <div class="contact-cards-stack">
+              <!-- 1. Location -->
               <div class="contact-detail-card">
-                <div class="contact-icon-bubble">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <div class="contact-icon-bubble" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
@@ -277,9 +278,10 @@
                 </div>
               </div>
 
+              <!-- 2. Phone & WhatsApp -->
               <div class="contact-detail-card">
-                <div class="contact-icon-bubble">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <div class="contact-icon-bubble" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path
                       d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
@@ -287,14 +289,21 @@
                 <div class="contact-text-group">
                   <h3>Telephone &amp; WhatsApp</h3>
                   <p><a href="tel:+919511939119">+91 95119 39119</a></p>
-                  <p><a href="https://wa.me/919511939119" target="_blank" rel="noopener"
-                      style="color: var(--color-accent-gold-dark); font-weight: 600;">Message on WhatsApp &rarr;</a></p>
+                  <div>
+                    <a href="https://wa.me/919511939119?text=Hello%20Talpona%20Exotica%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener" class="contact-whatsapp-pill" aria-label="Chat with Talpona Exotica on WhatsApp">
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+                      </svg>
+                      <span>Message on WhatsApp &rarr;</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
+              <!-- 3. Email -->
               <div class="contact-detail-card">
-                <div class="contact-icon-bubble">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <div class="contact-icon-bubble" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect width="20" height="16" x="2" y="4" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
@@ -305,9 +314,10 @@
                 </div>
               </div>
 
+              <!-- 4. Front Desk Hours -->
               <div class="contact-detail-card">
-                <div class="contact-icon-bubble">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <div class="contact-icon-bubble" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
                   </svg>
@@ -315,14 +325,34 @@
                 <div class="contact-text-group">
                   <h3>Front Desk Hours</h3>
                   <p>24 Hours Daily • Concierge Service</p>
+                  <span class="live-status-pill">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span>Front Desk Active Now</span>
+                  </span>
                 </div>
               </div>
+            </div>
+
+            <!-- Direct Booking Privileges Guarantee Card -->
+            <div class="direct-booking-banner">
+              <div class="direct-booking-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                <h4>Direct Reservation Privileges</h4>
+              </div>
+              <ul class="direct-booking-perks">
+                <li><span>✓</span> Guaranteed best direct tariff with zero third-party commissions</li>
+                <li><span>✓</span> Instant confirmation &amp; room allotment via WhatsApp</li>
+                <li><span>✓</span> Dedicated concierge for transfers and custom itinerary</li>
+              </ul>
             </div>
           </div>
 
           <!-- Right Column: Enquiry Form -->
           <div class="contact-form-panel reveal-on-scroll">
-            <h3 class="section-title" style="font-size: 2rem;">Send a Reservation Enquiry</h3>
+            <h3 class="section-title" style="font-size: clamp(2rem, 3.2vw, 2.8rem); line-height: 1.2;">Send a Reservation Enquiry</h3>
             <p class="section-mirante-subheading">direct booking request</p>
             <div class="gold-divider left"></div>
             <p class="section-subtitle" style="margin-bottom: 24px;">
@@ -330,71 +360,149 @@
               directly via WhatsApp.
             </p>
 
-            <form id="resort-enquiry-form">
+            <form id="resort-enquiry-form" novalidate>
               <div class="form-grid-two">
-                <div>
-                  <label for="contact-name" class="form-label">Full Name *</label>
-                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Vikram Sharma" required>
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">
+                    <span>Full Name</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </span>
+                    <input type="text" id="contact-name" class="form-input" placeholder="e.g. Vikram Sharma" autocomplete="name" required>
+                  </div>
                 </div>
-                <div>
-                  <label for="contact-phone" class="form-label">Mobile Number (WhatsApp) *</label>
-                  <input type="tel" id="contact-phone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+                <div class="form-group">
+                  <label for="contact-phone" class="form-label">
+                    <span>Mobile (WhatsApp)</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </span>
+                    <input type="tel" id="contact-phone" class="form-input" placeholder="e.g. +91 98765 43210" autocomplete="tel" required>
+                  </div>
                 </div>
               </div>
 
               <div class="form-field-full">
-                <label for="contact-email" class="form-label">Email Address *</label>
-                <input type="email" id="contact-email" class="form-input" placeholder="e.g. vikram@example.com"
-                  required>
-              </div>
-
-              <div class="form-grid-two">
-                <div>
-                  <label for="contact-checkin" class="form-label">Check-In Date *</label>
-                  <input type="date" id="contact-checkin" class="form-input" required>
-                </div>
-                <div>
-                  <label for="contact-checkout" class="form-label">Check-Out Date *</label>
-                  <input type="date" id="contact-checkout" class="form-input" required>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">
+                    <span>Email Address</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </span>
+                    <input type="email" id="contact-email" class="form-input" placeholder="e.g. vikram@example.com" autocomplete="email" required>
+                  </div>
                 </div>
               </div>
 
               <div class="form-grid-two">
-                <div>
-                  <label for="contact-guests" class="form-label">Number of Guests *</label>
-                  <select id="contact-guests" class="form-select">
-                    <option value="1 Guest">1 Guest</option>
-                    <option value="2 Guests" selected>2 Guests</option>
-                    <option value="3 Guests">3 Guests</option>
-                    <option value="4 Guests">4 Guests</option>
-                    <option value="Family / Group (5+)">Family / Group (5+)</option>
-                  </select>
+                <div class="form-group">
+                  <label for="contact-checkin" class="form-label">
+                    <span>Check-In Date</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </span>
+                    <input type="date" id="contact-checkin" class="form-input" required>
+                  </div>
                 </div>
-                <div>
-                  <label for="contact-room" class="form-label">Preferred Room Category</label>
-                  <select id="contact-room" class="form-select">
-                    <option value="Panoramic Sea View Suite with Jacuzzi">Panoramic Sea View Suite (Jacuzzi)</option>
-                    <option value="Partial Sea View Deluxe Room">Partial Sea View Deluxe</option>
-                    <option value="Twin Deluxe Room">Twin Deluxe Room</option>
-                    <option value="Deluxe Family Room">Deluxe Family Room</option>
-                    <option value="Sea View Deluxe Room">Sea View Deluxe Room</option>
-                    <option value="Any Available Category">Any Available Category</option>
-                  </select>
+                <div class="form-group">
+                  <label for="contact-checkout" class="form-label">
+                    <span>Check-Out Date</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </span>
+                    <input type="date" id="contact-checkout" class="form-input" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-grid-two">
+                <div class="form-group">
+                  <label for="contact-guests" class="form-label">
+                    <span>Number of Guests</span>
+                    <span class="req-star" aria-hidden="true">*</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </span>
+                    <select id="contact-guests" class="form-select">
+                      <option value="1 Guest">1 Guest</option>
+                      <option value="2 Guests" selected>2 Guests</option>
+                      <option value="3 Guests">3 Guests</option>
+                      <option value="4 Guests">4 Guests</option>
+                      <option value="Family / Group (5+)">Family / Group (5+)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="contact-room" class="form-label">
+                    <span>Preferred Room Category</span>
+                  </label>
+                  <div class="form-input-wrap">
+                    <span class="form-input-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></svg>
+                    </span>
+                    <select id="contact-room" class="form-select">
+                      <option value="Panoramic Sea View Suite with Jacuzzi">Panoramic Sea View Suite (Jacuzzi)</option>
+                      <option value="Partial Sea View Deluxe Room">Partial Sea View Deluxe</option>
+                      <option value="Twin Deluxe Room">Twin Deluxe Room</option>
+                      <option value="Deluxe Family Room">Deluxe Family Room</option>
+                      <option value="Sea View Deluxe Room">Sea View Deluxe Room</option>
+                      <option value="Any Available Category">Any Available Category</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
               <div class="form-field-full">
-                <label for="contact-message" class="form-label">Special Requests / Message</label>
-                <textarea id="contact-message" class="form-textarea"
-                  placeholder="Tell us about special occasions, arrival timings, or airport transfer requests..."></textarea>
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">
+                    <span>Special Requests / Message</span>
+                  </label>
+                  <textarea id="contact-message" class="form-textarea"
+                    placeholder="Tell us about special occasions, arrival timings, dietary preferences, or airport transfer requests..."></textarea>
+                </div>
               </div>
 
-              <button type="submit" class="btn btn-whatsapp btn-block">
-                <span>Submit Enquiry via WhatsApp</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <button type="submit" class="btn btn-whatsapp btn-block contact-submit-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/>
+                </svg>
+                <span>Submit Reservation Enquiry on WhatsApp</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </button>
+
+              <div class="form-reassurance-row">
+                <div class="reassurance-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <span>Instant WhatsApp Routing</span>
+                </div>
+                <div class="reassurance-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span>Fast Front Desk Response</span>
+                </div>
+                <div class="reassurance-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Zero Reservation Fees</span>
+                </div>
+              </div>
             </form>
           </div>
         </div>
