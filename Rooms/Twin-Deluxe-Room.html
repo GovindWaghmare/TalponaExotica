@@ -21,11 +21,18 @@
   <meta name="twitter:image" content="https://talponaexotica.com/Assets/Rooms/twin-deluxe-main.jpg">
 
   <!-- Preload Critical LCP Asset -->
-  <link rel="preload" as="image" href="../Assets/Rooms/twin-deluxe-main.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="../Assets/Rooms/twin-deluxe-main.webp" fetchpriority="high" type="image/webp">
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  <!-- Preconnect & Asynchronous Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  </noscript>
 
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
@@ -51,10 +58,10 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" href="../Assets/Logo/favicon.png">
   <link rel="apple-touch-icon" href="../Assets/Logo/favicon.png">
-  <link rel="stylesheet" href="../CSS/style.css">
-  <link rel="stylesheet" href="../CSS/rooms/twin-deluxe.css">
-  <link rel="stylesheet" href="../Components/Header.css">
-  <link rel="stylesheet" href="../Components/Footer.css">
+  <link rel="stylesheet" href="../CSS/style.min.css">
+  <link rel="stylesheet" href="../CSS/rooms/twin-deluxe.min.css">
+  <link rel="stylesheet" href="../Components/Header.min.css">
+  <link rel="stylesheet" href="../Components/Footer.min.css">
 </head>
 <body data-folder="rooms" data-page="twin-deluxe">
 
@@ -62,7 +69,7 @@
 <div class="top-bar">
   <div class="top-bar-container">
     <div class="top-bar-left">
-      <a href="https://maps.google.com/?q=Talpona+Exotica+Canacona+South+Goa" target="_blank" rel="noopener" class="top-bar-item">
+      <a href="https://maps.google.com/?q=Talpona+Exotica+Canacona+South+Goa" target="_blank" rel="noopener" class="top-bar-item" aria-label="Location: Talpona, Canacona, South Goa">
         <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
           <circle cx="12" cy="10" r="3"/>
@@ -70,7 +77,7 @@
         <span>Talpona, Canacona, South Goa</span>
       </a>
       <span class="top-bar-divider">•</span>
-      <a href="tel:+919511939119" class="top-bar-item">
+      <a href="tel:+919511939119" class="top-bar-item" aria-label="Call +91 95119 39119">
         <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
@@ -124,8 +131,8 @@
     <!-- Center Logo -->
     <div class="nav-center-logo">
       <a href="../Index.html" class="brand-logo" aria-label="Talpona Exotica Home">
-        <img src="../Assets/Logo/logo-white.png" alt="Talpona Exotica Logo" class="logo-img logo-light" width="154" height="80">
-        <img src="../Assets/Logo/logo.png" alt="Talpona Exotica Logo" class="logo-img logo-dark" width="154" height="80">
+        <img src="../Assets/Logo/logo-white.webp" alt="Talpona Exotica Logo" class="logo-img logo-light" width="154" height="80">
+        <img src="../Assets/Logo/logo.webp" alt="Talpona Exotica Logo" class="logo-img logo-dark" width="154" height="80">
       </a>
     </div>
 
@@ -155,7 +162,7 @@
 <div class="mobile-drawer" id="mobile-drawer">
   <div class="mobile-drawer-header">
     <a href="../Index.html" class="mobile-drawer-logo">
-      <img src="../Assets/Logo/logo.png" alt="Talpona Exotica" width="131" height="68">
+      <img src="../Assets/Logo/logo.webp" alt="Talpona Exotica" width="131" height="68">
     </a>
     <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">&times;</button>
   </div>
@@ -202,7 +209,7 @@
 
 
   <main id="main-content">
-    <section class="room-detail-hero" style="background-image: url('../Assets/Rooms/twin-deluxe-main.jpg');">
+    <section class="room-detail-hero" style="background-image: url('../Assets/Rooms/twin-deluxe-main.webp');">
       <div class="inner-hero-overlay"></div>
       <div class="room-hero-content">
         <nav class="hero-breadcrumb" aria-label="Breadcrumb">
@@ -272,23 +279,23 @@
             <p class="section-subtitle" style="margin-bottom: 24px;">Browse photographs showcasing the room interiors, bedding arrangements, ensuite bathroom, and resort surroundings.</p>
             <div class="room-gallery-mosaic">
               <div class="mosaic-item mosaic-featured">
-                <img src="../Assets/Rooms/twin-deluxe-main.jpg" alt="Twin Deluxe Room" loading="lazy">
+                <img src="../Assets/Rooms/twin-deluxe-main.webp" alt="Twin Deluxe Room" loading="lazy">
                 <div class="mosaic-caption">Twin Beds Configuration</div>
               </div>
               <div class="mosaic-item">
-                <img src="../Assets/Rooms/twin-deluxe-beds.jpg" alt="Individual Single Beds" loading="lazy">
+                <img src="../Assets/Rooms/twin-deluxe-beds.webp" alt="Individual Single Beds" loading="lazy">
                 <div class="mosaic-caption">Separate Single Beds</div>
               </div>
               <div class="mosaic-item">
-                <img src="../Assets/Rooms/twin-deluxe-balcony.jpg" alt="Private Balcony Area" loading="lazy">
+                <img src="../Assets/Rooms/twin-deluxe-balcony.webp" alt="Private Balcony Area" loading="lazy">
                 <div class="mosaic-caption">Private Balcony</div>
               </div>
               <div class="mosaic-item">
-                <img src="../Assets/Rooms/twin-deluxe-bathroom.jpg" alt="Modern Ensuite Bathroom" loading="lazy">
+                <img src="../Assets/Rooms/twin-deluxe-bathroom.webp" alt="Modern Ensuite Bathroom" loading="lazy">
                 <div class="mosaic-caption">Bathroom with Hot Shower</div>
               </div>
               <div class="mosaic-item">
-                <img src="../Assets/Images/experience-lounge.jpg" alt="Resort Lounge" loading="lazy">
+                <img src="../Assets/Images/experience-lounge.webp" alt="Resort Lounge" loading="lazy">
                 <div class="mosaic-caption">Resort Grounds</div>
               </div>
             </div>
@@ -617,7 +624,7 @@
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 24px;">
             <div class="room-card">
               <div class="room-card-image" style="height: 220px;">
-                <img src="../Assets/Rooms/family-room-main.jpg" alt="Deluxe Family Room" loading="lazy">
+                <img src="../Assets/Rooms/family-room-main.webp" alt="Deluxe Family Room" loading="lazy">
               </div>
               <div class="room-card-body" style="padding: 20px;">
                 <h4 style="font-family: var(--font-heading); font-size: 1.25rem;">Deluxe Family Room</h4>
@@ -627,7 +634,7 @@
             </div>
             <div class="room-card">
               <div class="room-card-image" style="height: 220px;">
-                <img src="../Assets/Rooms/partial-deluxe-main.jpg" alt="Partial Sea View Deluxe" loading="lazy">
+                <img src="../Assets/Rooms/partial-deluxe-main.webp" alt="Partial Sea View Deluxe" loading="lazy">
               </div>
               <div class="room-card-body" style="padding: 20px;">
                 <h4 style="font-family: var(--font-heading); font-size: 1.25rem;">Partial Sea View Deluxe</h4>
@@ -705,7 +712,7 @@
       <div class="footer-col footer-col-center">
         <div class="footer-logo-wrapper">
           <a href="../Index.html" class="footer-logo-link" aria-label="Talpona Exotica">
-            <img src="../Assets/Logo/logo.png" alt="Talpona Exotica" class="footer-logo-img" width="212" height="110">
+            <img src="../Assets/Logo/logo.webp" alt="Talpona Exotica" class="footer-logo-img" width="212" height="110">
           </a>
         </div>
         <p class="footer-tagline">

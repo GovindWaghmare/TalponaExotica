@@ -1,0 +1,28 @@
+{
+  "name": "talpona-exotica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "snap_subheadings.js",
+  "dependencies": {
+    "argparse": "^2.0.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "wawoff2": "^2.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cybercreativegoa/talponaexotica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cybercreativegoa/talponaexotica/issues"
+  },
+  "homepage": "https://github.com/cybercreativegoa/talponaexotica#readme"
+}

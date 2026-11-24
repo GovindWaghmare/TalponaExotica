@@ -21,11 +21,18 @@
   <meta name="twitter:image" content="https://talponaexotica.com/Assets/Images/inner-hero-gallery.jpg">
 
   <!-- Preload Critical LCP Asset -->
-  <link rel="preload" as="image" href="Assets/Images/inner-hero-gallery.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="Assets/Images/inner-hero-gallery.webp" fetchpriority="high" type="image/webp">
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  <!-- Preconnect & Asynchronous Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  </noscript>
 
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
@@ -41,10 +48,10 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="Assets/Logo/favicon.png">
   <link rel="apple-touch-icon" href="Assets/Logo/favicon.png">
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="CSS/gallery.css">
-  <link rel="stylesheet" href="Components/Header.css">
-  <link rel="stylesheet" href="Components/Footer.css">
+  <link rel="stylesheet" href="CSS/style.min.css">
+  <link rel="stylesheet" href="CSS/gallery.min.css">
+  <link rel="stylesheet" href="Components/Header.min.css">
+  <link rel="stylesheet" href="Components/Footer.min.css">
 </head>
 <body data-page="gallery">
 
@@ -52,7 +59,7 @@
 <div class="top-bar">
   <div class="top-bar-container">
     <div class="top-bar-left">
-      <a href="https://maps.google.com/?q=Talpona+Exotica+Canacona+South+Goa" target="_blank" rel="noopener" class="top-bar-item">
+      <a href="https://maps.google.com/?q=Talpona+Exotica+Canacona+South+Goa" target="_blank" rel="noopener" class="top-bar-item" aria-label="Location: Talpona, Canacona, South Goa">
         <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
           <circle cx="12" cy="10" r="3"/>
@@ -60,7 +67,7 @@
         <span>Talpona, Canacona, South Goa</span>
       </a>
       <span class="top-bar-divider">•</span>
-      <a href="tel:+919511939119" class="top-bar-item">
+      <a href="tel:+919511939119" class="top-bar-item" aria-label="Call +91 95119 39119">
         <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
@@ -114,8 +121,8 @@
     <!-- Center Logo -->
     <div class="nav-center-logo">
       <a href="Index.html" class="brand-logo" aria-label="Talpona Exotica Home">
-        <img src="Assets/Logo/logo-white.png" alt="Talpona Exotica Logo" class="logo-img logo-light" width="154" height="80">
-        <img src="Assets/Logo/logo.png" alt="Talpona Exotica Logo" class="logo-img logo-dark" width="154" height="80">
+        <img src="Assets/Logo/logo-white.webp" alt="Talpona Exotica Logo" class="logo-img logo-light" width="154" height="80">
+        <img src="Assets/Logo/logo.webp" alt="Talpona Exotica Logo" class="logo-img logo-dark" width="154" height="80">
       </a>
     </div>
 
@@ -145,7 +152,7 @@
 <div class="mobile-drawer" id="mobile-drawer">
   <div class="mobile-drawer-header">
     <a href="Index.html" class="mobile-drawer-logo">
-      <img src="Assets/Logo/logo.png" alt="Talpona Exotica" width="131" height="68">
+      <img src="Assets/Logo/logo.webp" alt="Talpona Exotica" width="131" height="68">
     </a>
     <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">&times;</button>
   </div>
@@ -192,7 +199,7 @@
 
 
   <main id="main-content">
-    <section class="inner-hero-section" style="background-image: url('Assets/Images/inner-hero-gallery.jpg');">
+    <section class="inner-hero-section" style="background-image: url('Assets/Images/inner-hero-gallery.webp');">
       <div class="inner-hero-overlay"></div>
       <div class="inner-hero-content">
         <nav class="hero-breadcrumb" aria-label="Breadcrumb">
@@ -229,7 +236,7 @@
         <div class="gallery-grid">
           <!-- Item 1 -->
           <div class="gallery-item wide" data-category="resort" data-title="Talpona Exotica Seaside Grounds">
-            <img src="Assets/Images/hero-slide-1.jpg" alt="Talpona Exotica Seaside Grounds" loading="lazy">
+            <img src="Assets/Images/hero-slide-1.webp" alt="Talpona Exotica Seaside Grounds" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Resort</span>
               <h3 class="gallery-item-title">Talpona Exotica Seaside Grounds</h3>
@@ -239,7 +246,7 @@
 
           <!-- Item 2 -->
           <div class="gallery-item" data-category="rooms" data-title="Panoramic Sea View Suite">
-            <img src="Assets/Rooms/panoramic-suite-main.jpg" alt="Panoramic Sea View Suite" loading="lazy">
+            <img src="Assets/Rooms/panoramic-suite-main.webp" alt="Panoramic Sea View Suite" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Rooms</span>
               <h3 class="gallery-item-title">Panoramic Sea View Suite</h3>
@@ -249,7 +256,7 @@
 
           <!-- Item 3 -->
           <div class="gallery-item tall" data-category="rooms" data-title="Private Jacuzzi Experience">
-            <img src="Assets/Rooms/panoramic-suite-jacuzzi.jpg" alt="Private Jacuzzi in Suite" loading="lazy">
+            <img src="Assets/Rooms/panoramic-suite-jacuzzi.webp" alt="Private Jacuzzi in Suite" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Rooms</span>
               <h3 class="gallery-item-title">Private Jacuzzi in Suite</h3>
@@ -259,7 +266,7 @@
 
           <!-- Item 4 -->
           <div class="gallery-item" data-category="dining" data-title="In-House Restaurant Atmosphere">
-            <img src="Assets/Images/dining-restaurant.jpg" alt="In-House Restaurant Atmosphere" loading="lazy">
+            <img src="Assets/Images/dining-restaurant.webp" alt="In-House Restaurant Atmosphere" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Dining</span>
               <h3 class="gallery-item-title">In-House Restaurant</h3>
@@ -269,7 +276,7 @@
 
           <!-- Item 5 -->
           <div class="gallery-item" data-category="dining" data-title="Fresh Coastal Culinary Cuisine">
-            <img src="Assets/Images/dining-food.jpg" alt="Fresh Coastal Culinary Cuisine" loading="lazy">
+            <img src="Assets/Images/dining-food.webp" alt="Fresh Coastal Culinary Cuisine" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Dining</span>
               <h3 class="gallery-item-title">Authentic Goan &amp; Coastal Cuisine</h3>
@@ -279,7 +286,7 @@
 
           <!-- Item 6 -->
           <div class="gallery-item wide" data-category="experiences" data-title="Backwater Kayaking in Talpona">
-            <img src="Assets/Images/activity-kayak.jpg" alt="Backwater Kayaking in Talpona" loading="lazy">
+            <img src="Assets/Images/activity-kayak.webp" alt="Backwater Kayaking in Talpona" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Experiences</span>
               <h3 class="gallery-item-title">Backwater Kayaking in Talpona</h3>
@@ -289,7 +296,7 @@
 
           <!-- Item 7 -->
           <div class="gallery-item" data-category="rooms" data-title="Partial Sea View Deluxe">
-            <img src="Assets/Rooms/partial-deluxe-main.jpg" alt="Partial Sea View Deluxe" loading="lazy">
+            <img src="Assets/Rooms/partial-deluxe-main.webp" alt="Partial Sea View Deluxe" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Rooms</span>
               <h3 class="gallery-item-title">Partial Sea View Deluxe Room</h3>
@@ -299,7 +306,7 @@
 
           <!-- Item 8 -->
           <div class="gallery-item" data-category="rooms" data-title="Twin Deluxe Room Arrangement">
-            <img src="Assets/Rooms/twin-deluxe-main.jpg" alt="Twin Deluxe Room Arrangement" loading="lazy">
+            <img src="Assets/Rooms/twin-deluxe-main.webp" alt="Twin Deluxe Room Arrangement" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Rooms</span>
               <h3 class="gallery-item-title">Twin Deluxe Room</h3>
@@ -309,7 +316,7 @@
 
           <!-- Item 9 -->
           <div class="gallery-item" data-category="rooms" data-title="Deluxe Family Room (2 Queens)">
-            <img src="Assets/Rooms/family-room-main.jpg" alt="Deluxe Family Room" loading="lazy">
+            <img src="Assets/Rooms/family-room-main.webp" alt="Deluxe Family Room" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Rooms</span>
               <h3 class="gallery-item-title">Deluxe Family Room</h3>
@@ -319,7 +326,7 @@
 
           <!-- Item 10 -->
           <div class="gallery-item" data-category="rooms" data-title="Sea View Deluxe Room Balcony">
-            <img src="Assets/Rooms/seaview-deluxe-main.jpg" alt="Sea View Deluxe Room" loading="lazy">
+            <img src="Assets/Rooms/seaview-deluxe-main.webp" alt="Sea View Deluxe Room" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Rooms</span>
               <h3 class="gallery-item-title">Sea View Deluxe Room</h3>
@@ -329,7 +336,7 @@
 
           <!-- Item 11 -->
           <div class="gallery-item" data-category="experiences" data-title="Dolphin Watching Safaris">
-            <img src="Assets/Images/activity-dolphin.jpg" alt="Dolphin Watching Safaris" loading="lazy">
+            <img src="Assets/Images/activity-dolphin.webp" alt="Dolphin Watching Safaris" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Experiences</span>
               <h3 class="gallery-item-title">South Goa Dolphin Safari</h3>
@@ -339,7 +346,7 @@
 
           <!-- Item 12 -->
           <div class="gallery-item wide" data-category="resort" data-title="Peaceful South Goa Coastal Shores">
-            <img src="Assets/Images/hero-slide-3.jpg" alt="Peaceful South Goa Coastal Shores" loading="lazy">
+            <img src="Assets/Images/hero-slide-3.webp" alt="Peaceful South Goa Coastal Shores" loading="lazy">
             <div class="gallery-item-overlay">
               <span class="gallery-item-category">Resort</span>
               <h3 class="gallery-item-title">Talpona Coastal Shores</h3>
@@ -435,7 +442,7 @@
       <div class="footer-col footer-col-center">
         <div class="footer-logo-wrapper">
           <a href="Index.html" class="footer-logo-link" aria-label="Talpona Exotica">
-            <img src="Assets/Logo/logo.png" alt="Talpona Exotica" class="footer-logo-img" width="212" height="110">
+            <img src="Assets/Logo/logo.webp" alt="Talpona Exotica" class="footer-logo-img" width="212" height="110">
           </a>
         </div>
         <p class="footer-tagline">

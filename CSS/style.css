@@ -6,7 +6,8 @@
 /* Local Font Fallback & Official Font Declarations */
 @font-face {
   font-family: 'Malvides';
-  src: url('../Assets/Fonts/Malvides.otf') format('opentype');
+  src: url('../Assets/Fonts/Malvides.woff2') format('woff2'),
+       url('../Assets/Fonts/Malvides.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -88,6 +89,21 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern Performance Architecture: Rendering Optimization */
+.room-showcase-section,
+.facilities-section,
+.experience-section,
+.resort-video-section,
+.activities-section,
+.dining-section,
+.testimonials-section,
+.faq-section,
+.final-cta-section,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -182,7 +198,7 @@ a {
 
 .section-mirante-subheading {
   font-family: 'Mirante', 'Cinzel', 'Cormorant Garamond', Georgia, serif !important;
-  color: #B6AE7C !important;
+  color: #5B4B3B;
   font-size: clamp(0.95rem, 1.5vw, 1.2rem);
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -378,10 +394,40 @@ a {
   z-index: 1;
 }
 
+
+.hero-slide:first-child {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+}
+.hero-slide:first-child .hero-slide-img {
+  transform: none !important;
+  transition: none !important;
+}
 .hero-slide.is-active {
   opacity: 1;
   visibility: visible;
   z-index: 2;
+}
+
+
+/* Hero Responsive Image Architecture for LCP */
+.hero-slide-picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.hero-slide-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  will-change: transform;
 }
 
 .hero-slide-bg {
@@ -458,6 +504,17 @@ a {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.8s ease 0.8s;
+}
+
+
+/* Immediate visibility for first slide on initial render to prevent LCP render delay */
+.hero-slide:first-child .hero-eyebrow,
+.hero-slide:first-child .hero-title,
+.hero-slide:first-child .hero-desc,
+.hero-slide:first-child .hero-actions {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 .hero-slide.is-active .hero-eyebrow,
@@ -1411,6 +1468,7 @@ a {
   position: relative;
   transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
   animation: facilityFloat 5.5s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .facility-card:nth-child(2n) .facility-icon-wrap { animation-duration: 4.8s; animation-delay: -1s; }
@@ -2800,9 +2858,8 @@ a {
    ======================================================== */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-on-scroll.is-revealed {

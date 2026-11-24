@@ -108,6 +108,10 @@
 .contact-text-group a[href^="mailto:"] {
   font-weight: 600;
   color: #5B4B3B;
+  display: inline-block;
+  padding: 4px 0;
+  min-height: 24px;
+  line-height: 1.5;
   transition: color 0.2s ease;
 }
 
@@ -124,20 +128,20 @@
   gap: 8px;
   margin-top: 8px;
   padding: 6px 14px;
-  background: #25D366;
+  background: #075E54;
   color: #FFFFFF !important;
   font-size: 0.82rem !important;
   font-weight: 700;
   border-radius: 999px;
   text-decoration: none !important;
-  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 3px 10px rgba(7, 94, 84, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .contact-whatsapp-pill:hover {
-  background: #20bd5a;
+  background: #054c44;
   transform: translateY(-1px);
-  box-shadow: 0 5px 14px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 5px 14px rgba(5, 76, 68, 0.35);
 }
 
 .contact-whatsapp-pill svg {

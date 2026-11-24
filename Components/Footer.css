@@ -18,6 +18,7 @@
   display: flex;
   width: max-content;
   animation: marqueeScroll 35s linear infinite;
+  will-change: transform;
 }
 
 .marquee-content {
@@ -333,6 +334,7 @@
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: waFloat 4s ease-in-out infinite;
+  will-change: transform;
 }
 
 .floating-whatsapp-btn:hover {

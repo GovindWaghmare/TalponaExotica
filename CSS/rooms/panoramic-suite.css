@@ -6,7 +6,8 @@
 
 @font-face {
   font-family: 'Malvides';
-  src: url('../../Assets/Fonts/Malvides.otf') format('opentype');
+  src: url('../../Assets/Fonts/Malvides.woff2') format('woff2'),
+       url('../../Assets/Fonts/Malvides.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
